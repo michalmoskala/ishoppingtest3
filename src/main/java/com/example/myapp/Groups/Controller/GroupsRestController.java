@@ -19,16 +19,16 @@ public class GroupsRestController {
     public GroupEntity groupEntity(@PathVariable long id) {
         return new GroupEntity(id,1,"name",false, new Date());
     }
-//
-//    @GetMapping("/{id}/available-products")
-//    public ArrayList<AvailableProductEntity> groupProducts(@PathVariable long id) {
-//        ArrayList<AvailableProductEntity> arrayList = new ArrayList<>();
-//        arrayList.add(new AvailableProductEntity(1,id,1,"name","kg",2,false,new Date()));
-//        arrayList.add(new AvailableProductEntity(2,id,2,"name2","kg",2.5,false,new Date()));
-//        arrayList.add(new AvailableProductEntity(3,id,3,"name23","kg",2,false,new Date()));
-//
-//        return arrayList;
-//    }
+
+    @GetMapping("/{id}/available-products")
+    public ArrayList<AvailableProductEntity> groupProducts(@PathVariable long id) {
+        ArrayList<AvailableProductEntity> arrayList = new ArrayList<>();
+        arrayList.add(new AvailableProductEntity(1,id,1,"name","kg",2,false,new Date()));
+        arrayList.add(new AvailableProductEntity(2,id,2,"name2","kg",2.5,false,new Date()));
+        arrayList.add(new AvailableProductEntity(3,id,3,"name23","kg",2,false,new Date()));
+
+        return arrayList;
+    }
 
 }
 
