@@ -34,9 +34,9 @@ public class GroupsRestController {
     @GetMapping("/{id}/users")
     public ArrayList<UserEntity> groupEntityUsers(@PathVariable long id) {
         ArrayList<UserEntity> arrayList = new ArrayList<>();
-        arrayList.add(new UserEntity(id,"mihu","m@m.c","admin1");
-        arrayList.add(new UserEntity(id,"mihu2","m2@m.c","admin12");
-        arrayList.add(new UserEntity(id,"mihu3","m3@m.c","admin13");
+        arrayList.add(new UserEntity(1,"mihu","m@m.c","admin1");
+        arrayList.add(new UserEntity(2,"mihu2","m2@m.c","admin12");
+        arrayList.add(new UserEntity(3,"mihu3","m3@m.c","admin13");
 
         return arrayList;
     }
