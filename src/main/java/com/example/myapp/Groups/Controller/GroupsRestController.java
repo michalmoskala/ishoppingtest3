@@ -18,7 +18,7 @@ import java.util.Date;
 @RequestMapping("/groups")
 public class GroupsRestController {
 
-    @GetMapping("/")
+    @GetMapping("")
     public ArrayList<GroupEntity> groupEntities() {
         ArrayList<GroupEntity> arrayList = new ArrayList<>();
         arrayList.add(new GroupEntity(1,1,"name",false, new Date()));
