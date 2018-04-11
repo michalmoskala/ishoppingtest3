@@ -2,6 +2,7 @@ package com.example.myapp.Groups.Controller;
 
 import com.example.myapp.AvailableProducts.Repository.Entity.AvailableProductEntity;
 import com.example.myapp.Groups.Repository.Entity.GroupEntity;
+import com.example.myapp.Users.Repository.Entity.UserEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,17 @@ public class GroupsRestController {
     public GroupEntity groupEntity(@PathVariable long id) {
         return new GroupEntity(id,1,"name",false, new Date());
     }
+
+    @GetMapping("/{id}/users")
+    public ArrayList<UserEntity> groupEntityUsers(@PathVariable long id) {
+        ArrayList<UserEntity> arrayList = new ArrayList<>();
+        arrayList.add(new UserEntity(id,"mihu","m@m.c","admin1");
+        arrayList.add(new UserEntity(id,"mihu2","m2@m.c","admin12");
+        arrayList.add(new UserEntity(id,"mihu3","m3@m.c","admin13");
+
+        return arrayList;
+    }
+
 
     @GetMapping("/{id}/available-products")
     public ArrayList<AvailableProductEntity> groupProducts(@PathVariable long id) {
