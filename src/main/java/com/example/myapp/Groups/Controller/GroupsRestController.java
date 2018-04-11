@@ -15,8 +15,8 @@ import java.util.Date;
 @RequestMapping("/groups")
 public class GroupsRestController {
 
-    @GetMapping("/all")
-    public ArrayList<GroupEntity> groupEntities(@PathVariable long id) {
+    @GetMapping("/")
+    public ArrayList<GroupEntity> groupEntities() {
         ArrayList<GroupEntity> arrayList = new ArrayList<>();
         arrayList.add(new GroupEntity(1,1,"name",false, new Date()));
         arrayList.add(new GroupEntity(2,1,"name2",false, new Date()));
