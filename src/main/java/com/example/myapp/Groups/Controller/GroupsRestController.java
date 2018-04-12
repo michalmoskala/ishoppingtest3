@@ -1,6 +1,8 @@
 package com.example.myapp.Groups.Controller;
 
 import com.example.myapp.AvailableProducts.Repository.Entity.AvailableProductEntity;
+import com.example.myapp.AvailableProducts.Repository.Entity.ProductTemplateEntity;
+import com.example.myapp.Groups.Repository.Entity.CategoryEntity;
 import com.example.myapp.Groups.Repository.Entity.GroupEntity;
 import com.example.myapp.ShoppingLists.Repository.Entity.ProductEntity;
 import com.example.myapp.ShoppingLists.Repository.Entity.ShoppingListEntity;
@@ -21,16 +23,16 @@ public class GroupsRestController {
     @GetMapping("")
     public ArrayList<GroupEntity> groupEntities() {
         ArrayList<GroupEntity> arrayList = new ArrayList<>();
-        arrayList.add(new GroupEntity(1,1,"name",false, new Date()));
-        arrayList.add(new GroupEntity(2,1,"name2",false, new Date()));
-        arrayList.add(new GroupEntity(3,1,"name3",false, new Date()));
+        arrayList.add(new GroupEntity(1,1,"Dom",false, new Date()));
+        arrayList.add(new GroupEntity(2,1,"Biuro",false, new Date()));
+        arrayList.add(new GroupEntity(3,1,"Akademik",false, new Date()));
 
         return arrayList;
     }
 
     @GetMapping("/{id}")
     public GroupEntity groupEntity(@PathVariable long id) {
-        return new GroupEntity(id,1,"name",false, new Date());
+        return new GroupEntity(id,1,"Dom",false, new Date());
     }
 
     @GetMapping("/{id}/users")
@@ -70,13 +72,35 @@ public class GroupsRestController {
     @GetMapping("/{id}/available-products")
     public ArrayList<AvailableProductEntity> groupProducts(@PathVariable long id) {
         ArrayList<AvailableProductEntity> arrayList = new ArrayList<>();
-        arrayList.add(new AvailableProductEntity(1,id,1,"name","kg",2,false,new Date()));
-        arrayList.add(new AvailableProductEntity(2,id,2,"name2","kg",2.5,false,new Date()));
-        arrayList.add(new AvailableProductEntity(3,id,3,"name23","kg",2,false,new Date()));
+        arrayList.add(new AvailableProductEntity(1,id,4,"Ziemniaki","kg",1.5,false,new Date()));
+        arrayList.add(new AvailableProductEntity(3,id,1,"Ser Gouda","kg",0.2,false,new Date()));
+        arrayList.add(new AvailableProductEntity(5,id,2,"Cisowianka Niegazowana","l",1.5,false,new Date()));
 
         return arrayList;
     }
 
+	@GetMapping("/{id}/product-templates")
+	public ArrayList<ProductTemplateEntity> groupTemplates(@PathVariable long id){
+		ArrayList<ProductTemplateEntity> arrayList = new ArrayList<>();
+		arrayList.add(new ProductTemplateEntity(1,id,4,"Ziemniaki","kg",1.5,false,new Date()));
+		arrayList.add(new ProductTemplateEntity(3,id,1,"Ser Gouda","kg",0.2,false,new Date()));
+		arrayList.add(new ProductTemplateEntity(5,id,2,"Cisowianka Niegazowana","l",1.5,false,new Date()));
+		
+		return arrayList;
+	}
+	
+	@GetMapping("/{id}/categories")
+	public ArrayList<CategoryEntity> groupCategories(@PathVariable long id){
+		ArrayList<CategoryEntity> arrayList = new ArrayList<>();
+		arrayList.add(new CategoryEntity(1,id,"colorkey_3","Nabial",false,new Date()));
+		arrayList.add(new CategoryEntity(2,id,"colorkey_4","Woda i napoje",false,new Date()));
+		arrayList.add(new CategoryEntity(3,id,"colorkey_2","Sosy",false,new Date()));
+		arrayList.add(new CategoryEntity(4,id,"colorkey_1","Warzywa",false,new Date()));
+
+		return arrayList;
+	}
+	
+	
 }
 
 

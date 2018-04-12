@@ -16,7 +16,7 @@ public class AvailableProductsRestController {
 
     @GetMapping("/{id}")
     public AvailableProductEntity availableProductEntity(@PathVariable long id) {
-        return new AvailableProductEntity(id,1,1,"name","kg",2,false,new Date());
+        return new AvailableProductEntity(id,1,1,"Kefir","l",0.5,false,new Date());
     }
 
 }
