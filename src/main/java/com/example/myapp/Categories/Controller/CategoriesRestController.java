@@ -1,11 +1,7 @@
 package com.example.myapp.Categories.Controller;
 
 import com.example.myapp.AvailableProducts.Repository.Entity.AvailableProductEntity;
-import com.example.myapp.Groups.Repository.Entity.CategoryEntity;
-import com.example.myapp.Groups.Repository.Entity.GroupEntity;
-import com.example.myapp.ShoppingLists.Repository.Entity.ProductEntity;
-import com.example.myapp.ShoppingLists.Repository.Entity.ShoppingListEntity;
-import com.example.myapp.Users.Repository.Entity.UserEntity;
+import com.example.myapp.Categories.Repository.Entity.CategoryEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

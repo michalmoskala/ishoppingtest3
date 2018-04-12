@@ -2,7 +2,7 @@ package com.example.myapp.Groups.Controller;
 
 import com.example.myapp.AvailableProducts.Repository.Entity.AvailableProductEntity;
 import com.example.myapp.AvailableProducts.Repository.Entity.ProductTemplateEntity;
-import com.example.myapp.Groups.Repository.Entity.CategoryEntity;
+import com.example.myapp.Categories.Repository.Entity.CategoryEntity;
 import com.example.myapp.Groups.Repository.Entity.GroupEntity;
 import com.example.myapp.ShoppingLists.Repository.Entity.ProductEntity;
 import com.example.myapp.ShoppingLists.Repository.Entity.ShoppingListEntity;
